@@ -1,0 +1,15 @@
+{
+  "name": "subsides-api",
+  "version": "1.0.0",
+  "description": "API des subsides de la Ville de Bruxelles pour l'exercice budgétaire 2022 avec les données de géolocalisation des bénéficiaires",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Nicola Tournay",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

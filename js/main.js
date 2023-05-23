@@ -10,8 +10,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // fonction pour ajouter les marqueurs
 function getMarkers(data) {
     data.forEach(element => {
-        var marker = L.marker([parseFloat(element["Latitude"]), parseFloat(element["Longitude"])]).addTo(map);
-        marker.bindPopup(
+        var circleMarker = L.circleMarker([parseFloat(element["Latitude"]), parseFloat(element["Longitude"])], {
+            fillColor: '#fe0100',
+            radius: 10,
+            opacity: 0,
+            fillOpacity: 0.4
+        }).addTo(map);
+        circleMarker.bindPopup(
             `<h3>${element["Nom du bénéficiaire de la subvention"]}</h3>
             <p><strong>Total :</strong> ${element["Montant octroyé"]}€</p>
             <p>${element["Rue"]} ${element["Numéro de maison"]}, ${element["Code postal"]} ${element["Commune"]}</p>
@@ -26,6 +31,13 @@ function getCoordinates() {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            // obtenir les montant min. et max.
+            var montants = [];
+            data.forEach(element => {
+                montants.push(parseFloat(element["Montant octroyé"]));
+            });
+            var min = Math.min(...montants);
+            var max = Math.max(...montants);
             // ajouter les marqueurs
             getMarkers(data);
         }).catch(error => {
@@ -66,3 +78,4 @@ function getDetails() {
             console.error("Erreur lors de la récupération des données :", error);
     });
 }
+

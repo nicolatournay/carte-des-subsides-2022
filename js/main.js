@@ -180,3 +180,51 @@ function getBeneficiaires(data) {
 }
 
 getCoordinates();
+
+// capturer l'élément select des quartiers
+var quartiersSelect = document.querySelector("#quartiers-select");
+
+// fonction pour ajouter les quartiers
+function getQuartiers() {
+    // récupérer les données
+    fetch("http://localhost:3000/quartiers.json")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // ajouter les options au select
+            data.forEach(quartier => {
+                var option = document.createElement("option");
+                option.value = quartier.nom;
+                option.text = quartier.nom;
+                quartiersSelect.appendChild(option);
+            })
+        }).catch(error => {
+            console.error("Erreur lors de la récupération des données :", error);
+    });
+}
+
+// ajouter un écouteur d'événement
+quartiersSelect.addEventListener("change", function() {
+    var quartier = quartiersSelect.value;
+    console.log(quartier);
+    // fetch(`http://localhost:3000/quartiers/${quartier}.json`)
+    fetch(`http://localhost:3000/quartiers.json`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // itérer avec for sur les données pour récupérer les coordonnées si quartier = data.nom
+            for (var i = 0; i < data.length; i++) {
+                if (quartier === data[i].nom) {
+                    var lat = data[i].lat;
+                    var lon = data[i].lon;
+                    var zoom = data[i].zoom;
+                    map.setView([lat, lon], zoom);
+                    break;
+                }
+            }
+        }).catch(error => {
+            console.error("Erreur lors de la récupération des données :", error);
+    });
+});
+
+getQuartiers();

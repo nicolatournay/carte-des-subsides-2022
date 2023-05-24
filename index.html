@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.min.css">
-    <script src="js/main.js" defer async></script>
+    <script src="js/main.js" defer async type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,6 +20,16 @@
 <body>
     <header>
         <h1>Carte des subventions de la Ville de Bruxelles pour l'année 2022</h1>
+        <div class="select">
+            <div class="beneficiaires">
+                <label for="liste-beneficiaires">Trouve un bénéficiaire</label>
+                <select name="beneficiaires" id="beneficiaires-select"></select>
+            </div>
+            <div class="quartiers">
+                <label for="liste-quartiers">Zoome sur ton quartier</label>
+                <select name="quartiers" id="quartiers-select"></select>
+            </div>
+        </div>
     </header>
     <main>
         <div id="map"></div>
@@ -27,6 +37,5 @@
     <footer>
         <small>Projet réalisé avec ❤️ par <a href="">Nicola Tournay</a> | 2023©</small>
     </footer>
-    <script src="https://colorjs.io/dist/color.global.js"></script> 
 </body>
 </html>

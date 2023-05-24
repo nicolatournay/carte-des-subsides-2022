@@ -1,11 +1,11 @@
+import Color from "https://colorjs.io/dist/color.js";
+
 // déterminer un espace de couleur entre vert et rouge
 let color = new Color("p3", [0, 1, 0]);
 let redgreen = color.range("red", {
 	space: "lch", // interpolation space
 	outputSpace: "srgb"
 });
-redgreen(.5); // midpoint
-console.log(redgreen(.5));
 
 // initialiser la carte
 var map = L.map('map').setView([50.8465573, 4.351697], 12);
@@ -15,6 +15,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+// ensemble des marqueurs
+var markers = {};
 
 // fonction pour ajouter les marqueurs
 function getMarkers(data, min, max, seuil) {
@@ -54,6 +57,7 @@ function getMarkers(data, min, max, seuil) {
                 <p onclick="getDetails()" data-q="${element["Le numéro de BCE du bénéficiaire de la subvention"]}">En savoir +</p>`
             );
         }
+        markers[element["Le numéro de BCE du bénéficiaire de la subvention"]] = circleMarker;
     });
 }
 
@@ -89,6 +93,8 @@ function getCoordinates() {
             console.log("Montant min. (filtre) : ", minFiltre + "\n" + "Montant max. (filtre) : ", maxFiltre);
             // ajouter les marqueurs
             getMarkers(data, minFiltre, maxFiltre, seuil);
+            // ajouter les bénéficiaires
+            getBeneficiaires(data);
         }).catch(error => {
             console.error("Erreur lors de la récupération des données :", error);
     });
@@ -128,3 +134,47 @@ function getDetails() {
     });
 }
 
+// capturer l'élément select
+var beneficiairesSelect = document.querySelector("#beneficiaires-select");
+// ajouter un écouteur d'événement
+beneficiairesSelect.addEventListener("change", function() {
+    var bce = beneficiairesSelect.value;
+    var marker = markers[bce];
+    if (marker) {
+        map.setView(marker.getLatLng(), 19); // zoom to the marker
+        marker.openPopup(); // open the popup
+    }
+});
+
+// fonction pour récupérer les noms et les numéros de BCE des bénéficiaires
+function getBeneficiaires(data) {
+    var listeBeneficiaires = [];
+    data.forEach(element => {
+        var beneficiaire = {
+            nom: element["Nom du bénéficiaire de la subvention"],
+            bce: element["Le numéro de BCE du bénéficiaire de la subvention"]
+        };
+        listeBeneficiaires.push(beneficiaire);
+    });
+    // trier la liste par ordre alphabétique
+    listeBeneficiaires.sort((a, b) => {
+        if (a.nom < b.nom) {
+            return -1;
+        }
+        if (a.nom > b.nom) {
+            return 1;
+        }
+        return 0;
+    });
+    // ajouter les options au select
+    listeBeneficiaires.forEach(beneficiaire => {
+        var option = document.createElement("option");
+        option.value = beneficiaire.bce;
+        // raccourcir les noms trop longs
+        if (beneficiaire.nom.length > 50) {
+            beneficiaire.nom = beneficiaire.nom.substring(0, 50) + "...";
+        }
+        option.text = beneficiaire.nom;
+        beneficiairesSelect.appendChild(option);
+    });
+}

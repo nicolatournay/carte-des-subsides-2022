@@ -109,8 +109,8 @@ function transformerChaine(chaine) {
     return chaineTransformee.replace(/^0+/, "");
 }
 
-// fonction pour appeler l'API de la Ville de Bruxelles
-function getDetails() {
+// fonction pour appeler l'API de la Ville de Bruxelles (définie dans le contexte global !)
+window.getDetails = function getDetails() {
     var dataQ = event.target.dataset.q;
     var q = transformerChaine(dataQ);
     console.log(q);

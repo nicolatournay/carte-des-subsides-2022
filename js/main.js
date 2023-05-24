@@ -178,3 +178,5 @@ function getBeneficiaires(data) {
         beneficiairesSelect.appendChild(option);
     });
 }
+
+getCoordinates();

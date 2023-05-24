@@ -1,0 +1,170 @@
+[
+    {
+        "nom": "Îlot Sacré",
+        "lat": 50.8481289,
+        "lon": 4.3543627,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier Royal",
+        "lat": 50.8423131,
+        "lon": 4.3594419,
+        "zoom": 17
+    },
+    {
+        "nom": "Mont des Arts",
+        "lat": 50.8438626,
+        "lon": 4.3567662,
+        "zoom": 17
+    },
+    {
+        "nom": "Sablon",
+        "lat": 50.8405519,
+        "lon": 4.355722,
+        "zoom": 17
+    },
+    {
+        "nom": "Marolles",
+        "lat": 50.8370968,
+        "lon": 4.3458029,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier Midi-Lemonnier",
+        "lat": 50.8434618,
+        "lon": 4.3447962,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier de la Senne",
+        "lat": 50.84916,
+        "lon": 4.3429793,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier des Quais / Quartier maritime",
+        "lat": 50.8534801,
+        "lon": 4.3469272,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier Marais-Jacqmain / Martyrs",
+        "lat": 50.8517147,
+        "lon": 4.3566421,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier des Libertés",
+        "lat": 50.8496117,
+        "lon": 4.3664382,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier Dansaert",
+        "lat": 50.8509237,
+        "lon": 4.3446282,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier Anneessens",
+        "lat": 50.8437592,
+        "lon": 4.3446965,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier des Squares",
+        "lat": 50.846949,
+        "lon": 4.3830846,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier Léopold",
+        "lat": 50.8392005,
+        "lon": 4.3725768,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier Nord",
+        "lat": 50.8608358,
+        "lon": 4.3577961,
+        "zoom": 17
+    },
+    {
+        "nom": "Mont aux Potences",
+        "lat": 50.8376287,
+        "lon": 4.3526056,
+        "zoom": 17
+    },
+    {
+        "nom": "Treurenberg",
+        "lat": 50.8476669,
+        "lon": 4.3628169,
+        "zoom": 17
+    },
+    {
+        "nom": "Coudenberg",
+        "lat": 50.8431733,
+        "lon": 4.3583496,
+        "zoom": 17
+    },
+    {
+        "nom": "Quartier européen",
+        "lat": 50.8423504,
+        "lon": 4.3839451,
+        "zoom": 17
+    },
+    {
+        "nom": "Haren (Centre)",
+        "lat": 50.8909441,
+        "lon": 4.4157553,
+        "zoom": 17
+    },
+    {
+        "nom": "Buda (Haren)",
+        "lat": 50.9051898,
+        "lon": 4.4141502,
+        "zoom": 17
+    },
+    {
+        "nom": "Vieux Laeken",
+        "lat": 50.883392,
+        "lon": 4.3487134,
+        "zoom": 17
+    },
+    {
+        "nom": "Heysel (Laeken)",
+        "lat": 50.8888824,
+        "lon": 4.3407193,
+        "zoom": 17
+    },
+    {
+        "nom": "Mutsaard (Laeken)",
+        "lat": 50.9009613,
+        "lon": 4.3606791,
+        "zoom": 17
+    },
+    {
+        "nom": "Neder-Heembeek (N-O-H)",
+        "lat": 50.8961181,
+        "lon": 4.3928569,
+        "zoom": 17
+    },
+    {
+        "nom": "Over-Heembeek (N-O-H)",
+        "lat": 50.8942835,
+        "lon": 4.38301,
+        "zoom": 17
+    },
+    {
+        "nom": "Ransbeek (N-O-H)",
+        "lat": 50.9100466,
+        "lon": 4.4021837,
+        "zoom": 17
+    },
+    {
+        "nom": "Marly (N-O-H)",
+        "lat": 50.8983145,
+        "lon": 4.402132,
+        "zoom": 17
+    }
+]

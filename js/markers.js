@@ -4,7 +4,7 @@ export { markers, getMarkers };
 import { map } from './map.js';
 
 // importation de la fonction redgreen depuis colors.js
-import { redgreen } from "./colors.js";
+import { getColor } from "./colors.js";
 
 // importer getDetails
 import { getDetails } from "./details.js";
@@ -29,8 +29,8 @@ function getMarkers(data) {
         var contact = element["Donnée de contact"];
         // ajouter les marqueurs
         var circleMarker = L.circleMarker([parseFloat(element["Latitude"]), parseFloat(element["Longitude"])], {
-            fillColor: redgreen(.5),
-            color: redgreen(.5),
+            fillColor: getColor(montant),
+            color: getColor(montant),
             radius: 10,
             opacity: 1,
             fillOpacity: 0.4

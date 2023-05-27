@@ -22,21 +22,10 @@ function getCoordinates() {
             var moyenne = montants.reduce((a, b) => a + b, 0) / montants.length;
             // trouver l'écart-type des montants
             var ecartType = Math.sqrt(montants.map(x => Math.pow(x - moyenne, 2)).reduce((a, b) => a + b) / montants.length);
+            // publier les résultats dans la console
             console.log("Montant min. : ", min + "\n" + "Montant max. : ", max + "\n" + "Moyenne : ", moyenne + "\n" + "Ecart-type : ", ecartType);
-            // itérer sur les montants pour retirer les valeurs aberrantes
-            var montantsFiltres = [];
-            var seuil = 1000000;
-            montants.forEach(element => {
-                if (element <= seuil) {
-                    montantsFiltres.push(element);
-                }
-            });
-            // trouver le nouveau min. et max.
-            var minFiltre = Math.min(...montantsFiltres);
-            var maxFiltre = Math.max(...montantsFiltres);
-            console.log("Montant min. (filtre) : ", minFiltre + "\n" + "Montant max. (filtre) : ", maxFiltre);
             // ajouter les marqueurs
-            getMarkers(data, minFiltre, maxFiltre, seuil);
+            getMarkers(data);
             // ajouter les bénéficiaires
             getBeneficiaires(data);
         }).catch(error => {

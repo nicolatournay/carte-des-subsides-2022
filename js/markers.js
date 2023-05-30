@@ -45,14 +45,13 @@ function getMarkers(data) {
         circleMarker.bindPopup(popupContent);
         // ajouter un événement click à la balise p ayant la classe "opendetails" quand le popup est ouvert
         circleMarker.on("popupopen", function() {
-            var opendetails = document.querySelector(".opendetails");
-            opendetails.addEventListener("click", function() {
-                // récupérer le numéro de BCE
-                var q = this.getAttribute("data-q");
-                // récupérer les détails
-                getDetails(q);
+            document.addEventListener("click", function(event) {
+                if(event.target.matches('.opendetails')) {
+                    var q = event.target.getAttribute("data-q");
+                    getDetails(q);
+                }
             });
-        });
+        });                        
         markers[element["Le numéro de BCE du bénéficiaire de la subvention"]] = circleMarker;
     });
 }

@@ -17,9 +17,9 @@ var exit = document.querySelector('.fa-xmark');
 var beneficiaire = document.querySelector('.beneficiaire');
 
 exit.addEventListener('click', function() {
-    details.style.display = "none";
     subsides.innerHTML = "";
     beneficiaire.innerHTML = "";
+    details.style.display = "none";
 });
 
 // fonction pour appeler l'API de la Ville de Bruxelles (définie dans le contexte global !)

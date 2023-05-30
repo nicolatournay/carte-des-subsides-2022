@@ -42,16 +42,14 @@ function getMarkers(data) {
             ${getContact(contactType, contact)}
             <p class="opendetails" data-q="${element["Le numéro de BCE du bénéficiaire de la subvention"]}">En savoir +</p>
         `;
-        circleMarker.bindPopup(popupContent);
-        // ajouter un événement click à la balise p ayant la classe "opendetails" quand le popup est ouvert
-        circleMarker.on("popupopen", function() {
-            document.addEventListener("click", function(event) {
-                if(event.target.matches('.opendetails')) {
-                    var q = event.target.getAttribute("data-q");
-                    getDetails(q);
-                }
-            });
-        });                        
+        circleMarker.bindPopup(popupContent);                        
         markers[element["Le numéro de BCE du bénéficiaire de la subvention"]] = circleMarker;
     });
 }
+
+document.addEventListener("click", function(event) {
+    if(event.target.matches('.opendetails')) {
+        var q = event.target.getAttribute("data-q");
+        getDetails(q);
+    }
+});

@@ -14,40 +14,6 @@ h2 {
     text-align: center;
 }
 
-header {
-    padding: 2rem;
-}
-
-footer {
-    padding: 0.5rem;
-    text-align: center;
-}
-
-.select {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-top: 1.5rem;
-    div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-select {
-    width: 100%;
-}
-
-#map {
-    height: 80vh;
-    width: 100%;
-}
-
-#about {
-    padding: 2rem;
-}
-
 .anchor {
     text-decoration: none;
     color: black;
@@ -57,12 +23,4 @@ select {
     transform: translateX(-50%);
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
-    .select {
-        flex-direction: row;
-        justify-content: center;
-        div {
-            width: 35%;
-        }
-    }
-}
+

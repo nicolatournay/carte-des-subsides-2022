@@ -19,19 +19,23 @@ import { getQuartiers, quartiersSelect, initQuartiersSelect } from './quartiers.
 // importer la fonction de contenu
 import { getContent } from './content.js';
 
-// =================================================
+/*
+============================
+✨ LA MAGIE COMMENCE ICI ✨
+============================
+*/
 
-// 1) MAP
+// 1) MAP 🗺
 
 // récupérer les données de géolocalisation
 getCoordinates();
 
-// 2) BENEFICIAIRES
+// 2) BENEFICIAIRES €
 
 // Appel de la fonction pour initialiser l'écouteur d'événement
 initBeneficiairesSelect(beneficiairesSelect, markers, map);
 
-// 3) QUARTIERS
+// 3) QUARTIERS 🏘
 
 // Appel de la fonction pour ajouter les quartiers
 getQuartiers();
@@ -39,7 +43,7 @@ getQuartiers();
 // Appel de la fonction pour initialiser l'écouteur d'événement
 initQuartiersSelect(quartiersSelect, map);
 
-// 4) CONTENU
+// 4) CONTENU 📝
 
 // Appel de la fonction pour ajouter le contenu
 getContent();

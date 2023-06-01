@@ -10,23 +10,8 @@ function transformerChaine(chaine) {
     return chaineTransformee.replace(/^0+/, "");
 }
 
-var details = document.querySelector('.details');
-
-// var subsides = document.querySelector('.subsides');
-
-var exit = document.querySelector('.fa-xmark');
-
-var beneficiaire = document.querySelector('.beneficiaire');
-
-exit.addEventListener('click', function() {
-    subsides.innerHTML = "";
-    beneficiaire.innerHTML = "";
-    details.style.display = "none";
-});
-
 // fonction pour appeler l'API de la Ville de Bruxelles (définie dans le contexte global !)
 function getDetails(dataQ) {
-    // var dataQ = e.target.dataset.q;
     var q = transformerChaine(dataQ);
     console.log(q);
     fetch(`https://opendata.brussels.be/api/records/1.0/search/?dataset=subsides-subsidies-2022&q=${q}`)
@@ -54,7 +39,6 @@ function getDetails(dataQ) {
                     </div>
                 `;
                 subsides += subside;
-                // openModal(template);
             });
             if (numSubsides > 1) {
                 var subsidesWord = "subsides";
@@ -70,7 +54,6 @@ function getDetails(dataQ) {
                 <div class="subsides">${subsides}</div>
             `;
             openModal(template);
-            // details.style.display = "block";
         }).catch(error => {
             console.error("Erreur lors de la récupération des données :", error);
     });

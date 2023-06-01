@@ -1,14 +1,3 @@
-.details {
-    background-color: aqua;
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    min-height: 100%;
-    padding: 2rem;
-    display: none;
-}
-
 .beneficiaire {
     height: 20%;
     display: flex;
@@ -33,7 +22,7 @@
 }
 
 .subside {
-    width: calc(50% - 1rem);
+    width: 100%;
     // black border around each subside
     border: 1px solid black;
     // padding around each subside
@@ -60,4 +49,10 @@ header {
 
 #map {
     z-index: 1;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    .subside {
+        width: calc(50% - 1rem);
+    }
 }

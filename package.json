@@ -14,6 +14,7 @@
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "markdown-it": "^13.0.1",
+    "node-fetch": "^2.6.11",
     "tingle.js": "^0.16.0"
   }
 }

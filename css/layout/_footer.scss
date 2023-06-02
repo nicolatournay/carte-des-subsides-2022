@@ -1,6 +1,14 @@
 footer {
     padding: 2rem;
     text-align: center;
-    background-color: $smooth;
-    @include selection-dark;
+    background-color: $smooth-darker;
+    @include selection-light;
+    color: $smooth-lighter;
+    a {
+        color: $smooth-lighter;
+        text-decoration: none;
+        &:hover {
+            color: $smooth-darkest;
+        }
+    }
 }

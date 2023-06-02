@@ -5,7 +5,7 @@ export {openModal};
 function openModal(template) {
    // instanciate new modal
     var modal = new tingle.modal({
-        footer: true,
+        footer: false,
         stickyFooter: false,
         closeMethods: ['overlay', 'button', 'escape'],
         closeLabel: "Close",

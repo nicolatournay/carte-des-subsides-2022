@@ -1,7 +1,10 @@
-$smooth: #f2f3f0;
+$smooth: lighten(#6bd3cc, 30%);
 
-$smooth-darker: darken(#d6d8d4, 10%);
+$smooth-darker: #048b9a;
 
-$smooth-darkest: darken(#d6d8d4, 50%);
+$smooth-darkest: darken(#048b9a, 10%);
 
-$smooth-lighter: lighten(#f2f3f0, 4%);
+$smooth-lighter: white;
+
+// gris clair : #f2f3f0 => $smooth-lighter: lighten(#f2f3f0, 4%);
+// gris foncé : #d6d8d4 => darker : darken(#d6d8d4, 10%), darkest : darken(#d6d8d4, 50%)

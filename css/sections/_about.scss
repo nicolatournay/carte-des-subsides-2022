@@ -1,9 +1,10 @@
 .about {
     padding: 2rem;
-    background-color: $smooth-lighter;
+    background-color: $smooth;
     h2 {
         font-family: 'Poiret One', cursive;
         text-transform: capitalize;
+        font-size: 2rem;
     }
     @include selection-dark;
 }

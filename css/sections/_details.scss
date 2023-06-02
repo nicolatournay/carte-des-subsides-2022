@@ -23,11 +23,12 @@
 
 .subside {
     width: 100%;
-    // black border around each subside
-    border: 1px solid black;
-    // padding around each subside
+    // border: 1px solid $smooth-darkest;
+    border-radius: 0.5rem;
     padding: 1rem;
     height: 30%;
+    background-color: $smooth-darker;
+    color: $smooth-lighter;
 }
 
 .objet {

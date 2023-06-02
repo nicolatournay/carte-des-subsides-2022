@@ -1,5 +1,7 @@
 export { beneficiairesSelect, initBeneficiairesSelect, getBeneficiaires };
 
+import { closePopups } from "./markers.js";
+
 import { resetMap } from "./map.js";
 
 // capturer l'élément select
@@ -10,6 +12,7 @@ function initBeneficiairesSelect(beneficiairesSelect, markers, map) {
     beneficiairesSelect.addEventListener("change", function() {
         if (beneficiairesSelect.value == "0") {
             resetMap();
+            closePopups();
         } else {
             var bce = beneficiairesSelect.value;
             var marker = markers[bce];

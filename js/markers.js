@@ -1,4 +1,4 @@
-export { markers, getMarkers };
+export { markers, getMarkers, closePopups };
 
 // importer la carte
 import { map } from './map.js';

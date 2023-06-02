@@ -2,12 +2,15 @@ export { getQuartiers, quartiersSelect, initQuartiersSelect };
 
 import { resetMap } from "./map.js";
 
+import { closePopups } from "./markers.js";
+
 var quartiersSelect = document.querySelector("#quartiers-select");
 
 function initQuartiersSelect(quartiersSelect, map) {
   quartiersSelect.addEventListener("change", function() {
     if (quartiersSelect.value == "0") {
       resetMap();
+      closePopups();
     } else {
       var quartier = quartiersSelect.value;
       console.log(quartier);

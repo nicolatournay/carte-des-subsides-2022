@@ -1,4 +1,4 @@
-# À-propos
+## À-propos
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. **Vestibulum** tincidunt metus non erat finibus, consequat scelerisque risus rhoncus. Integer ultricies consectetur est sit amet faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In non odio nulla. In tristique enim et felis imperdiet, et maximus quam vulputate. Nullam fermentum, nibh in semper malesuada, lorem mi tempor sapien, sit amet efficitur nulla sem vel diam. Nullam massa quam, vestibulum ut nunc non, malesuada suscipit turpis.
 

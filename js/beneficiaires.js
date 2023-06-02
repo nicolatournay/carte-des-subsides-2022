@@ -1,17 +1,24 @@
 export { beneficiairesSelect, initBeneficiairesSelect, getBeneficiaires };
 
+import { resetMap } from "./map.js";
+
 // capturer l'élément select
 var beneficiairesSelect = document.querySelector("#beneficiaires-select");
 
 // ajouter un écouteur d'événement sur l'élément select
 function initBeneficiairesSelect(beneficiairesSelect, markers, map) {
     beneficiairesSelect.addEventListener("change", function() {
-        var bce = beneficiairesSelect.value;
-        var marker = markers[bce];
-        if (marker) {
-            map.setView(marker.getLatLng(), 19); // zoom to the marker
-            marker.openPopup(); // open the popup
+        if (beneficiairesSelect.value == "0") {
+            resetMap();
+        } else {
+            var bce = beneficiairesSelect.value;
+            var marker = markers[bce];
+            if (marker) {
+                map.setView(marker.getLatLng(), 19); // zoom to the marker
+                marker.openPopup(); // open the popup
+            }
         }
+        
     });
 }
 

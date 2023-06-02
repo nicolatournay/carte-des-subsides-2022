@@ -1,10 +1,10 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: $smooth-darkest;
 }
 
 h1 {
-    font-size: 1.8rem;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.5rem 0;
     text-align: center;
 }
 
@@ -21,6 +21,17 @@ h2 {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.btn {
+    background-color: $smooth-darkest;
+    color: $smooth-lighter;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    font-weight: 700;
+    @include hover-shadow;
 }
 
 

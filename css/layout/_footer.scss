@@ -1,4 +1,6 @@
 footer {
-    padding: 0.5rem;
+    padding: 2rem;
     text-align: center;
+    background-color: $smooth;
+    @include selection-dark;
 }

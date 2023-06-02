@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.min.css">
     <script src="js/tingle.min.js"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Poiret+One&display=swap" rel="stylesheet">
+    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -16,21 +18,26 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+    <!-- Custom JS -->
     <script src="js/main.js" defer async type="module"></script>
-    <title>Document</title>
+    <title>Carte des subventions de la Ville de Bruxelles pour l'année 2022</title>
 </head>
 <body>
     <header>
-        <h1>Carte des subventions de la Ville de Bruxelles pour l'année 2022</h1>
-        <a class="anchor" href="#content">À-propos <i class="fa-solid fa-arrow-down"></i></a>
+        <h1>Carte 2022 des subventions de la Ville de Bruxelles</h1>
+        <a class="anchor btn" href="#content">En savoir <i class="fa-solid fa-plus"></i></a>
         <div class="select" id="intro">
             <div class="beneficiaires">
-                <label for="liste-beneficiaires"><i class="fa-solid fa-location-dot"></i> Trouve un bénéficiaire</label>
-                <select name="beneficiaires" id="beneficiaires-select"></select>
+                <select name="beneficiaires" id="beneficiaires-select">
+                    <option value="0">Tous les bénéficiaires</option>
+                </select>
+                <i class="fa-solid fa-caret-down"></i>
             </div>
             <div class="quartiers">
-                <label for="liste-quartiers"><i class="fa-solid fa-magnifying-glass"></i> Inspecte ton quartier</label>
-                <select name="quartiers" id="quartiers-select"></select>
+                <select name="quartiers" id="quartiers-select">
+                    <option value="0">Tous les quartiers</option>
+                </select>
+                <i class="fa-solid fa-caret-down"></i>
             </div>
         </div>
     </header>
@@ -38,7 +45,7 @@
         <div id="map"></div>
         <div class="about">
             <div id="content"></div>
-            <a class="anchor" href="#intro">Consulter la carte <i class="fa-solid fa-arrow-up"></i></a>
+            <a class="anchor btn" href="#intro">Consulter la carte <i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </main>
     <footer>

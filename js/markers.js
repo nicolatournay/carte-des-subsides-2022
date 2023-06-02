@@ -53,3 +53,10 @@ document.addEventListener("click", function(event) {
         getDetails(q);
     }
 });
+
+// une fonction pour fermer tous les popups ouverts sur la carte
+function closePopups() {
+    for (var id in markers) {
+        markers[id].closePopup();
+    }
+}

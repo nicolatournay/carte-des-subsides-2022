@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
-app.use(express.static('../data'));
+app.use(express.static('./data'));
 
 app.get('/content', (req, res) => {
     fs.readFile('./data/content.md', 'utf8', (err, data) => {

@@ -1,5 +1,13 @@
 header {
     padding: 2rem;
+    background-color: $smooth-darker;
+    @include selection-light;
+    h1 {
+        color: $smooth-lighter;
+        text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
+        font-family: 'Poiret One', cursive;
+        font-size: 2.5rem;
+    }
 }
 
 .select {
@@ -8,17 +16,43 @@ header {
     gap: 1rem;
     padding-top: 1.5rem;
     div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        position: relative;
     }
+}
+
+.fa-caret-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+    color: $smooth-darker;
 }
 
 select {
     width: 100%;
+    background-color: $smooth;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    appearance: none;
+    @include hover-shadow;
+    color: $smooth-darkest;
+    outline: none;
+}
+
+option {
+    &:checked {
+        background-color: $smooth-darker;
+        color: $smooth-lighter;
+    }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
+    header {
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
     .select {
         flex-direction: row;
         justify-content: center;

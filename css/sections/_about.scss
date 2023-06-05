@@ -1,10 +1,25 @@
 .about {
     padding: 2rem;
     background-color: $smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
     h2 {
         font-family: 'Poiret One', cursive;
         text-transform: capitalize;
         font-size: 2rem;
     }
     @include selection-dark;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    .about {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: none;
+        > div {
+            width: calc(50% - 1rem);
+        }
+    }
 }

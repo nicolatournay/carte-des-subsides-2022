@@ -7,6 +7,7 @@ import { resetMap } from "./map.js";
 // capturer l'élément select
 var beneficiairesSelect = document.querySelector("#beneficiaires-select");
 
+
 // ajouter un écouteur d'événement sur l'élément select
 function initBeneficiairesSelect(beneficiairesSelect, markers, map) {
     beneficiairesSelect.addEventListener("change", function() {

@@ -8,6 +8,9 @@ header {
         font-family: 'Poiret One', cursive;
         font-size: 2.5rem;
     }
+    .anchor {
+        @include left-2-center;
+    }
 }
 
 .select {
@@ -32,8 +35,7 @@ select {
     width: 100%;
     background-color: $smooth;
     border: none;
-    border-radius: 1rem;
-    padding: 0.5rem;
+    @include rounded;
     appearance: none;
     @include hover-shadow;
     color: $smooth-darkest;

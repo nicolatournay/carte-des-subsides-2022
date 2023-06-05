@@ -32,7 +32,7 @@
                     <option value="0">Tous les bénéficiaires</option>
                 </select>
                 <i class="fa-solid fa-caret-down"></i>
-            </div>
+            </div>        
             <div class="quartiers">
                 <select name="quartiers" id="quartiers-select">
                     <option value="0">Tous les quartiers</option>
@@ -44,8 +44,21 @@
     <main>
         <div id="map"></div>
         <div class="about">
-            <div id="content"></div>
-            <a class="anchor btn" href="#intro">Consulter la carte <i class="fa-solid fa-arrow-up"></i></a>
+            <div id="content">
+                <a class="anchor btn" href="#intro">Consulter la carte <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+            <div class="contact">
+                <h2>Contactez-moi</h2>
+                <p>Si vous relevez une erreur sur la carte ou dans les données affichées, merci de bien vouloir me la communiquer en remplissant le formulaire ci-dessous.</p>
+                <form action="https://formspree.io/f/xnqoqjzq" method="POST">
+                    <div class="form-header">
+                        <input type="email" name="_replyto" placeholder="Votre email" required>
+                        <input type="text" name="_subject" placeholder="Objet" required>
+                    </div>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Votre message" required></textarea>
+                    <input class="btn" type="submit" value="Envoyer">
+                </form>
+            </div>
         </div>
     </main>
     <footer>

@@ -19,6 +19,9 @@ import { getQuartiers, quartiersSelect, initQuartiersSelect } from './quartiers.
 // importer la fonction de contenu
 import { getContent } from './content.js';
 
+// importer le formulaire de contact
+import { contactForm } from './contact_form.js';
+
 /*
 ============================
 ✨ LA MAGIE COMMENCE ICI ✨
@@ -47,3 +50,8 @@ initQuartiersSelect(quartiersSelect, map);
 
 // Appel de la fonction pour ajouter le contenu
 getContent();
+
+// 5) CONTACT 📧
+
+// Appel de la fonction pour initialiser le formulaire de contact
+contactForm();

@@ -40,6 +40,7 @@ select {
     @include hover-shadow;
     color: $smooth-darkest;
     outline: none;
+    cursor: pointer;
 }
 
 option {

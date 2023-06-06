@@ -13,8 +13,16 @@
     h3 {
         font-family: 'Poiret One', cursive;
         font-size: 1.5rem;
+        text-align: center;
     }
     @include selection-dark;
+    p a {
+        color: $smooth-darker;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
@@ -24,6 +32,9 @@
         gap: none;
         > div {
             width: calc(50% - 1rem);
+        }
+        p {
+            text-align: justify;
         }
     }
 }
